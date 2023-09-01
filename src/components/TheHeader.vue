@@ -14,7 +14,7 @@ export default {
   <div class="header-container vw-100 position-fixed">
     <!-- HEADER TOP -->
     <div class="header-box">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row text-white align-items-center">
           <div class="col d-flex justify-content-between">
             <div>
@@ -34,7 +34,7 @@ export default {
 
     <!-- HEADER NAV -->
     <div class="header-box bg-white pt-4 pb-4">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-3">
             <img src="/src/assets/imgs/logo-header.png" alt="">

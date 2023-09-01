@@ -9,15 +9,21 @@ export default {
     TheTheMain,
     TheFooter,
   },
-  data(){
-    return{
-      navTextElement:[
+  data() {
+    return {
+      navTextElement: [
         'Home',
         'About',
         'Services',
         'Showcase',
         'Blog',
         'Contact'
+      ],
+      socialTextElement: [
+        'Facebook',
+        'Instagram',
+        'Twitter',
+        'Youtube'
       ]
     }
   }
@@ -26,17 +32,20 @@ export default {
 </script>
 
 <template>
-  <TheHeader :navTextElement='navTextElement'>
-  </TheHeader>
-
-
-  <TheTheMain :myString=" `main by props` "></TheTheMain>
+  <TheHeader :navTextElement='navTextElement'></TheHeader>
+  <TheTheMain :socialTextElement='socialTextElement'></TheTheMain>
   <TheFooter></TheFooter>
 </template>
 
 <style lang="scss">
 template {
   font-family: Sans-serif, Arial, Helvetica;
+}
+
+@media (min-width: 1400px) {
+.container {
+    min-width: 1720px;
+}
 }
 </style>
 
