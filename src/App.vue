@@ -2,23 +2,32 @@
 import TheHeader from "./components/TheHeader.vue";
 import TheTheMain from "./components/TheMain.vue";
 import TheFooter from "./components/TheFooter.vue";
-import * as bootstrap from 'bootstrap';
 
 export default {
   components: {
     TheHeader,
     TheTheMain,
-    TheFooter
+    TheFooter,
   },
-  data() {
-    return {
-    };
-  },
+  data(){
+    return{
+      navTextElement:[
+        'Home',
+        'About',
+        'Services',
+        'Showcase',
+        'Blog',
+        'Contact'
+      ]
+    }
+  }
+
 };
 </script>
 
 <template>
-  <TheHeader :navTextElement="'prova'"></TheHeader>
+  <TheHeader :navTextElement='navTextElement'>
+  </TheHeader>
 
 
   <TheTheMain :myString=" `main by props` "></TheTheMain>

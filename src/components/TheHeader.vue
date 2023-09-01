@@ -1,9 +1,13 @@
 <script>
 export default {
   props: {
-    navTextElement: String,
+    navTextElement: {
+      type: Array,
+      required: true,
+    }
   }
 }
+
 </script>
 
 <template>
@@ -36,12 +40,13 @@ export default {
             <img src="/src/assets/imgs/logo-header.png" alt="">
           </div>
           <div class="col-6 d-flex align-items-end">
-            <ul class="d-flex justify-content-between list-unstyled w-100 text-uppercase">
-              <li v-for="navTextElement in 5">{{ navTextElement }}</li>
-              
-              
 
+            <ul class="d-flex justify-content-between list-unstyled w-100 text-uppercase">
+              <li class="nav-item" v-for="element in navTextElement">
+                <a class="nav-link" href="#">{{ element }}</a>
+              </li>
             </ul>
+
           </div>
           <div class="col-3 d-flex justify-content-end">
             <button class="btn btn-warning text-white">PURCHASE</button>
@@ -86,7 +91,6 @@ export default {
   }
 
   li :hover {
-    color: red;
     font-weight: 500;
   }
 }
