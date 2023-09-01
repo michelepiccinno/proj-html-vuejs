@@ -4,6 +4,10 @@ export default {
     socialTextElement: {
       type: Array,
       required: true,
+    },
+    cardObjects: {
+      type: Array,
+      required: true,
     }
   }
 }
@@ -54,25 +58,13 @@ export default {
             <img class="pb-4 d-block" src="/src/assets/imgs/hr.jpg" alt="">
             <button class="btn button-green text-white">VIEW ALL</button>
           </div>
-
           <div class="col-7">
-            <div class="row">
-              <div class="card-box col-6 border">
-                <i class="fa-solid fa-gauge-high"></i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in obcaecati modi aliquid. Omnis quo
-              </div>
-              <div class="card-box col-6 border">
-                <i class="fa-solid fa-cloud"></i>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in obcaecati modi aliquid. Omnis quo
-              </div>
-              <div class="row">
-                <div class="card-box col-6 border">
-                  <i class="fa-solid fa-tablet-screen-button"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in obcaecati modi aliquid. Omnis quo
-                </div>
-                <div class="card-box col-6 border">
-                  <i class="fa-solid fa-stopwatch"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in obcaecati modi aliquid. Omnis quo
+            <div class="row g-4">
+              <div class="col-6" v-for="(card) in cardObjects">
+                <div class="card">
+                  <i :class="card.icon"></i>
+                  <h3 class="section-title">{{ card.title }}</h3>
+                  <p>{{ card.parag }}</p>
                 </div>
               </div>
             </div>
@@ -80,9 +72,6 @@ export default {
         </div>
       </div>
     </section>
-
-
-
 
 
   </main>
@@ -137,16 +126,17 @@ main {
   }
 
   .second-section {
-    .card-box {
+    .card {
       padding: 3rem;
     }
 
-    .card-box:hover {
-      background-color: red;
+    .card i {
+      font-size: 4rem;
+      color: #00d9a6;
     }
 
     .section-title {
-      font-size: 3.5rem;
+      font-size: 2rem;
       font-weight: 400;
     }
   }

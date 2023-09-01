@@ -1,12 +1,12 @@
 <script>
 import TheHeader from "./components/TheHeader.vue";
-import TheTheMain from "./components/TheMain.vue";
+import TheMain from "./components/TheMain.vue";
 import TheFooter from "./components/TheFooter.vue";
 
 export default {
   components: {
     TheHeader,
-    TheTheMain,
+    TheMain,
     TheFooter,
   },
   data() {
@@ -24,7 +24,30 @@ export default {
         'Instagram',
         'Twitter',
         'Youtube'
-      ]
+      ],
+      cardObjects: [
+        {
+          icon: 'fa-solid fa-gauge-high',
+          title: 'Speed Optimization',
+          parag: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...'
+        },
+        {
+          icon: 'fa-solid fa-cloud',
+          title: 'Cloud Solutions',
+          parag: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...'
+        },
+        {
+          icon: 'fa-solid fa-tablet-screen-button',
+          title: 'Website Design',
+          parag: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...'
+        },
+        {
+          icon: 'fa-solid fa-stopwatch',
+          title: 'Online Marketing',
+          parag: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...'
+        },
+        
+      ],
     }
   }
 
@@ -33,7 +56,7 @@ export default {
 
 <template>
   <TheHeader :navTextElement='navTextElement'></TheHeader>
-  <TheTheMain :socialTextElement='socialTextElement'></TheTheMain>
+  <TheMain :socialTextElement='socialTextElement' :cardObjects="cardObjects"></TheMain>
   <TheFooter></TheFooter>
 </template>
 
@@ -43,9 +66,9 @@ template {
 }
 
 @media (min-width: 1400px) {
-.container {
+  .container {
     min-width: 1720px;
-}
+  }
 }
 </style>
 
