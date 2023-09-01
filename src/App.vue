@@ -18,11 +18,15 @@ export default {
 
 <template>
   <TheHeader></TheHeader>
-  <TheTheMain></TheTheMain>
+  <TheTheMain :myString="`main by props`"></TheTheMain>
   <TheFooter></TheFooter>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+template {
+  font-family: Sans-serif,Arial, Helvetica;
+}
+</style>
 
 
 
