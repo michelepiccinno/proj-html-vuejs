@@ -46,7 +46,7 @@ export default {
           title: 'Online Marketing',
           parag: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...'
         },
-        
+
       ],
     }
   }
@@ -61,9 +61,11 @@ export default {
 </template>
 
 <style lang="scss">
-template {
-  font-family: Sans-serif, Arial, Helvetica;
+* {
+  font-family: 'Quicksand', sans-serif;
 }
+
+
 
 @media (min-width: 1400px) {
   .container {

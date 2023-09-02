@@ -32,14 +32,14 @@ export default {
               ocean.Separated they live in Bookmarksgrove.
             </p>
           </div>
-          <button class="btn btn-dark">READ MORE</button>
+          <button class="section1-button btn btn-dark">READ MORE</button>
           <ul class="social-link-box d-flex gap-4 list-unstyled">
             <li class="social-item" v-for="element in socialTextElement">
               <a class="nav-link" href="#">{{ element }}</a>
             </li>
           </ul>
         </div>
-        <div>
+        <div class="position-relative">
           <img class="img-man" src="/src/assets/imgs/uomo-che-fa-finta-di-pensare.jpg" alt="">
         </div>
       </div>
@@ -50,20 +50,19 @@ export default {
     <section class="second-section">
       <div class="container">
         <div class="row">
-
-          <div class="col-5">
-            <h1 class="section-title">We Are Here To
-              Make YourWebsite
-              Look MoreElegantAnd Stylish!</h1>
-            <img class="pb-4 d-block" src="/src/assets/imgs/hr.jpg" alt="">
+          <div class="box-sect-left col-5">
+            <h1 class="section-title-left lh-base">We Are Here To &nbsp; Make Your <span class="txt-green">Website</span>
+              Look More <span class="txt-green">Elegant</span> And
+              Stylish!</h1>
+            <img class="pb-4 d-block mt-5 mb-4" src="/src/assets/imgs/hr.jpg" alt="">
             <button class="btn button-green text-white">VIEW ALL</button>
           </div>
           <div class="col-7">
             <div class="row g-4">
-              <div class="col-6" v-for="(card) in cardObjects">
+              <div class="col-6 position-relative" v-for="(card) in cardObjects">
                 <div class="card">
                   <i :class="card.icon"></i>
-                  <h3 class="section-title">{{ card.title }}</h3>
+                  <h3 class="section-title-right">{{ card.title }}</h3>
                   <p>{{ card.parag }}</p>
                 </div>
               </div>
@@ -72,15 +71,13 @@ export default {
         </div>
       </div>
     </section>
-
+    <!-- /SECTION 2 -->
 
   </main>
 </template>
 
 <style lang="scss" scoped>
 main {
-  position: relative;
-  z-index: -10;
   padding-top: 200px;
 
   .first-section {
@@ -113,21 +110,55 @@ main {
           border-radius: 50px;
           font-size: .8rem;
           padding: 1rem 3rem;
+          position: absolute;
         }
 
         .social-link-box {
           margin-top: 180px;
           font-weight: 500;
+
+          .nav-link:hover {
+            background: -webkit-linear-gradient(45deg, #00d9a6, #9be15d);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            color: transparent;
+          }
         }
 
-
+        .section1-button:hover {
+          background: #00d9a6;
+          border: none;
+          transform: scale(.99);
+          box-shadow: 6px 6px 25px 0px rgba(0, 0, 0, 0.35);
+          transition: .5s;
+        }
       }
     }
   }
 
   .second-section {
+    margin-top: 200px;
+
     .card {
       padding: 3rem;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 3px 35px 0 rgba(0, 0, 0, .14);
+    }
+
+    .card>p {
+      color: grey;
+    }
+
+    .card:hover {
+      position: absolute;
+      left: 12px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transition: .4s;
+      color: white;
+      background-image: linear-gradient(39deg, #00d9a6 0%, #9be15d 100%);
     }
 
     .card i {
@@ -135,9 +166,23 @@ main {
       color: #00d9a6;
     }
 
-    .section-title {
-      font-size: 2rem;
-      font-weight: 400;
+    .card:hover i {
+      transition: .4s;
+      color: white;
+    }
+
+    .card:hover p {
+      transition: .4s;
+      color: white;
+    }
+
+    .box-sect-left {
+      padding: 5rem;
+
+      .section-title-left {
+        font-size: 3.5rem;
+        font-weight: 600;
+      }
     }
   }
 
@@ -148,9 +193,9 @@ main {
   .first-section .img-man {
     border-radius: 50%;
     border: 60px solid lightgrey;
-    position: relative;
-    top: -90px;
-    right: -130px;
+    position: absolute;
+    top: -80px;
+    left: 240px;
   }
 
   .button-green {
@@ -164,9 +209,9 @@ main {
     font-size: .9rem;
   }
 
-
-
-
+  .txt-green {
+    color: #00d9a6;
+  }
 
 }
 </style>

@@ -41,7 +41,7 @@ export default {
           </div>
           <div class="col-6 d-flex align-items-end">
 
-            <ul class="d-flex justify-content-between list-unstyled w-100 text-uppercase">
+            <ul class="d-flex justify-content-between m-auto list-unstyled w-75 text-uppercase">
               <li class="nav-item" v-for="element in navTextElement">
                 <a class="nav-link" href="#">{{ element }}</a>
               </li>
@@ -61,37 +61,51 @@ export default {
 
 
 <style lang="scss" scoped>
-.header-box {
-  background-color: #3b3b3b;
-  padding: .7rem 5rem .7rem 5rem;
+.header-container {
+  z-index: 10;
 
-  .fa-phone {
-    line-height: unset;
-  }
+  .header-box {
+    background-color: #3b3b3b;
+    padding: .7rem 5rem .7rem 5rem;
 
-  button {
-    padding: 0 45px 0 45px;
-    background-color: transparent;
-    --bs-border-radius: 2rem;
-    border: none;
-    background-image: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
-    box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, .35);
-    text-shadow: 0 0 10px rgba(0, 0, 0, .04);
-    font-size: .9rem;
-  }
+    .fa-phone {
+      line-height: unset;
+    }
 
-  button :hover {
-    opacity: .5;
-  }
+    button {
+      padding: 0 45px 0 45px;
+      background-color: transparent;
+      --bs-border-radius: 2rem;
+      border: none;
+      background-image: linear-gradient(269deg, #00d9a6 0%, #9be15d 100%);
+      box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, .35);
+      text-shadow: 0 0 10px rgba(0, 0, 0, .04);
+      font-size: .9rem;
+    }
 
-  .fa-magnifying-glass {
-    line-height: 55px;
-    padding-left: 20px;
-    color: #00d9a6;
-  }
+    button:hover {
+      opacity: .5;
+    }
 
-  li :hover {
-    font-weight: 500;
+    .fa-magnifying-glass {
+      line-height: 55px;
+      padding-left: 20px;
+      color: #00d9a6;
+    }
+
+    li:hover {
+      font-weight: 500;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: .875em;
+      transition: .5s;
+    }
+
+    .nav-link:hover{
+      color: lightgrey;
+    }
   }
 }
 </style>
