@@ -11,6 +11,7 @@ export default {
   },
   data() {
     return {
+
       navTextElement: [
         'Home',
         'About',
@@ -19,12 +20,14 @@ export default {
         'Blog',
         'Contact'
       ],
+
       socialTextElement: [
         'Facebook',
         'Instagram',
         'Twitter',
         'Youtube'
       ],
+
       cardObjects: [
         {
           icon: 'fa-solid fa-gauge-high',
@@ -46,7 +49,57 @@ export default {
           title: 'Online Marketing',
           parag: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...'
         },
+      ],
 
+      squareObjects: [
+        {
+          src: '/src/assets/imgs/square-imgs/ina-soulis.jpg',
+          title: 'The Basket of Flowers ',
+          subTitleOne: 'BRANDING',
+          subTitleTwo: 'MARKETING'
+        },
+        {
+          src: '/src/assets/imgs/square-imgs/sunisa-misa.jpg',
+          title: ' A Famous Ferris Wheel',
+          subTitleOne: 'MARKETING',
+          subTitleTwo: ''
+        },
+        {
+          src: '/src/assets/imgs/square-imgs/shoes.jpg',
+          title: 'Complementary Colors',
+          subTitleOne: 'BRANDING',
+          subTitleTwo: 'MARKETING'
+        },
+        {
+          src: '/src/assets/imgs/square-imgs/table.jpg',
+          title: 'Business Prestige',
+          subTitleOne: 'BRANDING',
+          subTitleTwo: ''
+        },
+        {
+          src: '/src/assets/imgs/square-imgs/boats.jpg',
+          title: 'Colorful Origami Boats',
+          subTitleOne: 'BRANDING',
+          subTitleTwo: 'MARKETING'
+        },
+        {
+          src: '/src/assets/imgs/square-imgs/sofa.jpg',
+          title: 'Modern Couch',
+          subTitleOne: 'MARKETING',
+          subTitleTwo: ''
+        },
+        {
+          src: '/src/assets/imgs/square-imgs/hot-air-balloon.jpg',
+          title: 'Hot Air Balloons',
+          subTitleOne: 'BRANDING',
+          subTitleTwo: 'MARKETING'
+        },
+        {
+          src: '/src/assets/imgs/square-imgs/blue-lemon.jpg',
+          title: 'Make Difference',
+          subTitleOne: 'BRANDING',
+          subTitleTwo: ''
+        },
       ],
     }
   }
@@ -56,7 +109,10 @@ export default {
 
 <template>
   <TheHeader :navTextElement='navTextElement'></TheHeader>
-  <TheMain :socialTextElement='socialTextElement' :cardObjects="cardObjects"></TheMain>
+  <TheMain :socialTextElement='socialTextElement' 
+           :cardObjects='cardObjects' 
+           :squareObjects='squareObjects'>
+</TheMain>
   <TheFooter></TheFooter>
 </template>
 

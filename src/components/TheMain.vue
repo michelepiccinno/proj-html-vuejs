@@ -8,7 +8,11 @@ export default {
     cardObjects: {
       type: Array,
       required: true,
-    }
+    },
+    squareObjects: {
+      type: Array,
+      required: true,
+    },
   }
 }
 </script>
@@ -60,7 +64,7 @@ export default {
           </div>
           <div class="col-7">
             <div class="row g-4">
-              <div class="col-6 position-relative" v-for="(card) in cardObjects">
+              <div class="col-6 position-relative" v-for="card in cardObjects">
                 <div class="card">
                   <i :class="card.icon"></i>
                   <h3 class="section-title-right pt-4 pb-4">{{ card.title }}</h3>
@@ -109,7 +113,7 @@ export default {
     <!-- /SECTION 3 -->
 
     <!-- SECTION 4 -->
-    <section class="fourth section">
+    <section class="fourth-section">
       <div class="container">
         <div class="row row-cols-2">
           <div class="col">
@@ -121,22 +125,38 @@ export default {
             </h1>
             <img class="pb-4 d-block mt-4 mb-3" src="/src/assets/imgs/hr.jpg" alt="">
           </div>
-          <div class="col">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quaerat blanditiis aliquam perspiciatis
-            architecto neque molestias recusandae deleniti, temporibus molestiae delectus? Aperiam inventore earum
-            facilis. Maiores unde consequatur nihil et!
+          <div class="col d-flex align-items-end">
+            <p class="pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quaerat blanditiis aliquam
+              perspiciatis
+              architecto neque molestias recusandae deleniti, temporibus molestiae delectus? Aperiam inventore earum
+              facilis. Maiores unde consequatur nihil et!</p>
+          </div>
+        </div>
+        <!-- SQUARE -->
+        <div class="row row-cols-4 mt-4 g-1">
+          <div class="col" v-for="square in squareObjects">
+            <div class="img-box position-relative">
+              <img class="img-square mw-100 rounded" :src="square.src" alt="">
+              <div class="ombra rounded"></div>
+              <div class="text-box text-white">
+                <h3>{{ square.title }}</h3>
+                <span class="pe-3">{{ square.subTitleOne }}</span>
+                <span>{{ square.subTitleTwo }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="box-vertical-text">
+            <p>17 years of experience helping people for best solutions</p>
           </div>
         </div>
 
-
-    
-
-        <div class="row">aaaa</div>
+        <!-- /SQUARE -->
+        <div class="d-flex justify-content-center m-2">
+          <button class="btn button-green text-white z-index200">VIEW ALL</button>
+        </div>
       </div>
     </section>
     <!-- /SECTION 4 -->
-
-
 
   </main>
 </template>
@@ -298,7 +318,50 @@ main {
 
   }
 
+  .fourth-section {
+    .text-box {
+      opacity: 0;
+      position: absolute;
+      bottom: 50px;
+      left: 40px;
+    }
 
+    .ombra {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(269deg, #17d6aa 0%, #a4e471 100%);
+      opacity: 0;
+      transition: .8s;
+    }
+
+    .img-box:hover .ombra {
+      opacity: 0.88;
+      z-index: 30;
+    }
+
+    .img-box:hover .text-box {
+      opacity: 0.88;
+      transition: .5s;
+      transition-delay: .5s;
+      z-index: 30;
+    }
+
+    .img-box:hover {
+      transition: .5s;
+      transform: scale(1.1);
+      z-index: 30;
+    }
+
+    .box-vertical-text {
+      position: relative;
+      bottom: 450px;
+      left:1545px;
+      transform: rotate(-90deg);
+      font-size: 15px;
+      font-weight: 700;
+      color: #393939;
+    }
+  }
 
 
   /*altro css comune*/
