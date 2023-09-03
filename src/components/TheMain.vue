@@ -21,8 +21,8 @@ export default {
       <div class="first-section-left d-flex">
         <div class="left-text">
           <h4 class="pb-4">1 7 &nbsp;Y E A R S &nbsp;O F &nbsp;E X P E R I E N C E</h4>
-          <h1>Focus</h1>
-          <h1 class="pb-4">on Your <span class="business-txt">Business</span></h1>
+          <h1 class="font-weight-700">Focus</h1>
+          <h1 class="pb-4 font-weight-700">on Your <span class="business-txt">Business</span></h1>
           <img class="pb-4" src="/src/assets/imgs/hr.jpg" alt="">
           <div class="p-box">
             <p class="text-secondary pb-4">
@@ -51,7 +51,7 @@ export default {
       <div class="container">
         <div class="row">
           <div class="box-sect-left col-5">
-            <h1 class="section-title-left lh-base">We Are Here To &nbsp; Make Your <span class="txt-green">Website</span>
+            <h1 class="section-title-left lh-base font-weight-600">We Are Here To &nbsp; Make Your <span class="txt-green">Website</span>
               Look More <span class="txt-green">Elegant</span> And
               Stylish!</h1>
             <img class="pb-4 d-block mt-5 mb-4" src="/src/assets/imgs/hr.jpg" alt="">
@@ -62,9 +62,12 @@ export default {
               <div class="col-6 position-relative" v-for="(card) in cardObjects">
                 <div class="card">
                   <i :class="card.icon"></i>
-                  <h3 class="section-title-right">{{ card.title }}</h3>
+                  <h3 class="section-title-right pt-4 pb-4">{{ card.title }}</h3>
                   <p>{{ card.parag }}</p>
                 </div>
+              </div>
+              <div class="box-vertical-text">
+                <p>17 years of experience helping people for best solutions</p>
               </div>
             </div>
           </div>
@@ -72,6 +75,15 @@ export default {
       </div>
     </section>
     <!-- /SECTION 2 -->
+
+    <!-- SECTION 3 -->
+    <section class="third section">
+
+    </section>
+    <!-- /SECTION 3 -->
+
+
+
 
   </main>
 </template>
@@ -81,13 +93,18 @@ main {
   padding-top: 200px;
 
   .first-section {
-    background-color: #fafafa;
+    background: linear-gradient(180deg, rgba(230, 230, 230, 1) 4%, rgba(250, 250, 250, 1) 40%);
+    padding-top: 60px;
+    padding-bottom: 70px;
+    margin-top: -65px;
 
     .first-section-left {
       margin-left: 100px;
+      ;
 
       .left-text {
         padding-top: 100px;
+        padding-left: 70px;
 
         h1 {
           font-size: 5rem;
@@ -137,7 +154,10 @@ main {
   }
 
   .second-section {
-    margin-top: 200px;
+    background-color: white;
+    padding-top: 114px;
+    z-index: 20;
+   /* position: relative;*/
 
     .card {
       padding: 3rem;
@@ -154,9 +174,9 @@ main {
       position: absolute;
       left: 12px;
       top: 0;
-      right: 0;
+      right: 12px;
       bottom: 0;
-      transition: .4s;
+      transition: .8s;
       color: white;
       background-image: linear-gradient(39deg, #00d9a6 0%, #9be15d 100%);
     }
@@ -167,12 +187,17 @@ main {
     }
 
     .card:hover i {
-      transition: .4s;
+      transition: .8s;
+      color: white;
+    }
+
+    .card:hover h3 {
+      transition: .8s;
       color: white;
     }
 
     .card:hover p {
-      transition: .4s;
+      transition: .8s;
       color: white;
     }
 
@@ -180,13 +205,22 @@ main {
       padding: 5rem;
 
       .section-title-left {
-        font-size: 3.5rem;
-        font-weight: 600;
+        font-size: 55px;
       }
+
+
+    }
+
+    .box-vertical-text {
+      position: relative;
+      bottom: 650px;
+      left: 550px;
+      transform: rotate(-90deg);
+      font-size: 15px;
+      font-weight: 700;
+      color: #393939;
     }
   }
-
-
 
 
   /*altro css comune*/
@@ -195,7 +229,7 @@ main {
     border: 60px solid lightgrey;
     position: absolute;
     top: -80px;
-    left: 240px;
+    left: 165px;
   }
 
   .button-green {
@@ -207,6 +241,11 @@ main {
     box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, .35);
     text-shadow: 0 0 10px rgba(0, 0, 0, .04);
     font-size: .9rem;
+    transition: .8s;
+  }
+
+  .button-green:hover {
+    opacity: .5;
   }
 
   .txt-green {

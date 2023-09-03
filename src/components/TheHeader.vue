@@ -49,7 +49,7 @@ export default {
 
           </div>
           <div class="col-3 d-flex justify-content-end">
-            <button class="btn btn-warning text-white">PURCHASE</button>
+            <button class="btn text-white">PURCHASE</button>
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
@@ -81,6 +81,7 @@ export default {
       box-shadow: 6px 6px 25px 0 rgba(0, 217, 166, .35);
       text-shadow: 0 0 10px rgba(0, 0, 0, .04);
       font-size: .9rem;
+      transition: .7s;
     }
 
     button:hover {
