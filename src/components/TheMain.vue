@@ -51,7 +51,8 @@ export default {
       <div class="container">
         <div class="row">
           <div class="box-sect-left col-5">
-            <h1 class="section-title-left lh-base font-weight-600">We Are Here To &nbsp; Make Your <span class="txt-green">Website</span>
+            <h1 class="section-title section-title-left lh-base font-weight-600">We Are Here To &nbsp; Make Your <span
+                class="txt-green">Website</span>
               Look More <span class="txt-green">Elegant</span> And
               Stylish!</h1>
             <img class="pb-4 d-block mt-5 mb-4" src="/src/assets/imgs/hr.jpg" alt="">
@@ -77,11 +78,63 @@ export default {
     <!-- /SECTION 2 -->
 
     <!-- SECTION 3 -->
-    <section class="third section">
-
+    <section class="third-section">
+      <div class="row">
+        <div class="col-7">
+          <div class="box-img">
+            <img src="/src/assets/imgs/busy-architect.jpg" alt="">
+            <img class="img-businesswoman" src="/src/assets/imgs/businesswoman.jpg" alt="">
+            <div class="ombra"></div>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="box-sect">
+            <h1 class="section-title lh-base font-weight-600">
+              learn more<br>
+              about our<br>
+              <span class="txt-green">mission</span>
+            </h1>
+            <img class="pb-4 d-block mt-4 mb-3" src="/src/assets/imgs/hr.jpg" alt="">
+            <p class="text-secondary pb-3">
+              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+              blind
+              texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+              ocean.Separated they live in Bookmarksgrove.
+            </p>
+            <button class="btn button-green text-white">VIEW ALL</button>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- /SECTION 3 -->
 
+    <!-- SECTION 4 -->
+    <section class="fourth section">
+      <div class="container">
+        <div class="row row-cols-2">
+          <div class="col">
+            <img class="pb-4 d-block mt-4 mb-3" src="/src/assets/imgs/hr.jpg" alt="">
+            <h1 class="section-title lh-base font-weight-600">
+              Our recent <span class="txt-green">web designs</span> &<br>
+              some examples of<br>
+              past <span class="txt-green">projects</span>
+            </h1>
+            <img class="pb-4 d-block mt-4 mb-3" src="/src/assets/imgs/hr.jpg" alt="">
+          </div>
+          <div class="col">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quaerat blanditiis aliquam perspiciatis
+            architecto neque molestias recusandae deleniti, temporibus molestiae delectus? Aperiam inventore earum
+            facilis. Maiores unde consequatur nihil et!
+          </div>
+        </div>
+
+
+    
+
+        <div class="row">aaaa</div>
+      </div>
+    </section>
+    <!-- /SECTION 4 -->
 
 
 
@@ -93,7 +146,7 @@ main {
   padding-top: 200px;
 
   .first-section {
-    background: linear-gradient(180deg, rgba(230, 230, 230, 1) 4%, rgba(250, 250, 250, 1) 40%);
+    background: #f9f9f9;
     padding-top: 60px;
     padding-bottom: 70px;
     margin-top: -65px;
@@ -157,7 +210,7 @@ main {
     background-color: white;
     padding-top: 114px;
     z-index: 20;
-   /* position: relative;*/
+    /* position: relative;*/
 
     .card {
       padding: 3rem;
@@ -201,16 +254,6 @@ main {
       color: white;
     }
 
-    .box-sect-left {
-      padding: 5rem;
-
-      .section-title-left {
-        font-size: 55px;
-      }
-
-
-    }
-
     .box-vertical-text {
       position: relative;
       bottom: 650px;
@@ -221,6 +264,41 @@ main {
       color: #393939;
     }
   }
+
+  .third-section {
+    background: #f9f9f9;
+
+    .box-img {
+      width: 800px;
+      border-radius: 0 35px 35px 0;
+      position: relative;
+
+      img {
+        width: 100%;
+        border-radius: 0 35px 35px 0;
+      }
+
+      .ombra {
+        width: 100%;
+        border-radius: 0 35px 35px 0;
+        background-image: linear-gradient(269deg, #17d6aa 0%, #a4e471 100%);
+        opacity: .88;
+        position: absolute;
+        inset: 0;
+      }
+
+      .img-businesswoman {
+        position: absolute;
+        left: 250px;
+        top: 100px;
+        z-index: 10;
+        border-radius: 35px;
+      }
+    }
+
+  }
+
+
 
 
   /*altro css comune*/
@@ -250,6 +328,11 @@ main {
 
   .txt-green {
     color: #00d9a6;
+  }
+
+  section {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 
 }

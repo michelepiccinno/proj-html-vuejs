@@ -62,12 +62,12 @@ export default {
 
 <style lang="scss" scoped>
 .header-container {
-  z-index: 10;
+  z-index: 10000;
 
   .header-box {
     background-color: #3b3b3b;
     padding: .7rem 5rem .7rem 5rem;
-
+    box-shadow: 0 4px 44px 0 rgba(0,0,0,.14);
     .fa-phone {
       line-height: unset;
     }
