@@ -152,18 +152,56 @@ export default {
 
         <!-- /SQUARE -->
         <div class="d-flex justify-content-center m-2">
-          <button class="btn button-green text-white z-index200">VIEW ALL</button>
+          <button class="btn button-green text-white z-index200">READ MORE</button>
         </div>
       </div>
     </section>
     <!-- /SECTION 4 -->
 
+    <!-- SECTION 5 -->
+    <section class="fifth-section">
+      <div class="container">
+        <div class="row">
+          <div class="col position-relative">
+
+            <div class="box-img">
+              <img class="img-pc-woman" src="/src/assets/imgs/person-with-long-curly-hair.jpg" alt="">
+              <div class="ombra"></div>
+            </div>
+            <div class="box-right-text bg-white">
+              <h1 class="section-title lh-base font-weight-600">
+                We <span class="txt-green">Love What</span>
+                <p>We Do</p>
+              </h1>
+              <img class="pb-4" src="/src/assets/imgs/hr.jpg" alt="">
+              <p class="text-secondary pb-4">
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                blind
+                texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                ocean.Separated they live in Bookmarksgrove.
+              </p>
+              <ul class="list-unstyled">
+                <li><span class="txt-green"><i class="fa-solid fa-check"></i></span> &nbsp;far far away, behind the word
+                  mountains</li>
+                <li class="mt-3 mb-3"><span class="txt-green"><i class="fa-solid fa-check"></i></span> &nbsp;large
+                  language ocean</li>
+                <li><span class="txt-green"><i class="fa-solid fa-check"></i></span> &nbsp;far from the countries Vokalia
+                  and Consonantia</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /SECTION 5 -->
   </main>
 </template>
 
 <style lang="scss" scoped>
 main {
   padding-top: 200px;
+  overflow: hidden;
 
   .first-section {
     background: #f9f9f9;
@@ -230,8 +268,8 @@ main {
     background-color: white;
     padding-top: 114px;
     z-index: 20;
-    /* position: relative;*/
-
+    position: relative;
+  
     .card {
       padding: 3rem;
       border: none;
@@ -292,6 +330,7 @@ main {
       width: 800px;
       border-radius: 0 35px 35px 0;
       position: relative;
+      box-shadow: 0 3px 35px 0 rgba(0, 0, 0, .14);
 
       img {
         width: 100%;
@@ -313,6 +352,7 @@ main {
         top: 100px;
         z-index: 10;
         border-radius: 35px;
+        box-shadow: 0 3px 35px 0 rgba(0, 0, 0, .14);
       }
     }
 
@@ -355,13 +395,57 @@ main {
     .box-vertical-text {
       position: relative;
       bottom: 450px;
-      left:1545px;
+      left: 1545px;
       transform: rotate(-90deg);
       font-size: 15px;
       font-weight: 700;
       color: #393939;
     }
   }
+
+  .fifth-section {
+    background-color: #fcfcfc;
+
+    .box-img {
+      width: 900px;
+      height: 730px;
+      border-radius: 0 35px 35px 0;
+      position: relative;
+
+      img {
+        width: 100%;
+        border-radius: 35px 35px 35px 35px;
+      }
+
+      .ombra {
+        width: 100%;
+        border-radius: 35px 35px 35px 35px;
+        background-image: linear-gradient(269deg, #a4e471 0%, #17d6aa 100%);
+        opacity: .88;
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    .box-right-text {
+      position: absolute;
+      left: 800px;
+      top: 100px;
+      border-radius: 35px 35px 35px 35px;
+      padding: 120px 100px 180px;
+      box-shadow: 0 3px 35px 0 rgba(0, 0, 0, .14);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
 
 
   /*altro css comune*/
@@ -391,11 +475,6 @@ main {
 
   .txt-green {
     color: #00d9a6;
-  }
-
-  section {
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
 
 }

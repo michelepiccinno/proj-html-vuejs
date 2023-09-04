@@ -101,19 +101,24 @@ export default {
           subTitleTwo: ''
         },
       ],
+      footerMenuElements: [
+        'Careers',
+        'News',
+        'Terms of use',
+        'Privacy Projects',
+        'About',
+        'Contact',
+      ],
     }
   }
-
 };
 </script>
 
 <template>
   <TheHeader :navTextElement='navTextElement'></TheHeader>
-  <TheMain :socialTextElement='socialTextElement' 
-           :cardObjects='cardObjects' 
-           :squareObjects='squareObjects'>
-</TheMain>
-  <TheFooter></TheFooter>
+  <TheMain :socialTextElement='socialTextElement' :cardObjects='cardObjects' :squareObjects='squareObjects'>
+  </TheMain>
+  <TheFooter :footerMenuElements='footerMenuElements'></TheFooter>
 </template>
 
 <style lang="scss">
@@ -121,13 +126,12 @@ export default {
   font-family: 'Quicksand', sans-serif;
 }
 
-
-
 @media (min-width: 1400px) {
   .container {
     min-width: 1720px;
   }
 }
+
 </style>
 
 

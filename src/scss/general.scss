@@ -2,6 +2,13 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+
+  section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+
 .font-weight-600 {
   font-weight: 600;
 }
@@ -21,3 +28,4 @@
 .z-index200 {
   z-index: 200;
 }
+  
