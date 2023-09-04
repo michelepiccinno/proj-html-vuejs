@@ -45,6 +45,10 @@ export default {
         </div>
         <div class="position-relative">
           <img class="img-man" src="/src/assets/imgs/uomo-che-fa-finta-di-pensare.jpg" alt="">
+          <div class="bar grey-big-bar"></div>
+          <div class="bar grey-mid-bar"></div>
+          <div class="bar grey-small-bar"></div>
+          <div class="bar lightgrey-big-bar"></div>
         </div>
       </div>
     </section>
@@ -276,6 +280,43 @@ main {
           transition: .5s;
         }
       }
+    }
+
+    .bar {
+      border-radius: 30px;
+      position: absolute;
+    }
+
+    .grey-big-bar {
+      background-color: #d3d3d3;
+      width: 250px;
+      height: 60px;
+      top: 60px;
+      left: 80px;
+    }
+
+    .lightgrey-big-bar {
+      background-color: #fafafa;
+      width: 150px;
+      height: 60px;
+      top: 120px;
+      left: 122px;
+    }
+
+    .grey-mid-bar {
+      background-color: #d3d3d3;
+      width: 100px;
+      height: 60px;
+      top: 180px;
+      left: 140px;
+    }
+
+    .grey-small-bar {
+      background-color: #d3d3d3;
+      width: 85px;
+      height: 60px;
+      top: 60px;
+      left: -35px;
     }
   }
 
@@ -510,5 +551,4 @@ main {
     color: #00d9a6;
   }
 
-}
-</style>
+}</style>
