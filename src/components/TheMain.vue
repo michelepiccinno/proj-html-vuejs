@@ -163,10 +163,25 @@ export default {
       <div class="container">
         <div class="row">
           <div class="col position-relative">
-
             <div class="box-img">
               <img class="img-pc-woman" src="/src/assets/imgs/person-with-long-curly-hair.jpg" alt="">
               <div class="ombra"></div>
+              <div class="text-box text-white text-center">
+                <div class="d-flex flex-column">
+                  <h1>280</h1>
+                  <h2 class="pt-2 pb-5">PROJECTS</h2>
+                </div>
+                <div class="d-flex gap-5">
+                  <div>
+                    <h5>+3,500</h5>
+                    <h6>USERS' COMMENTS</h6>
+                  </div>
+                  <div>
+                    <h5>+3,500</h5>
+                    <h6>USERS' COMMENTS</h6>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="box-right-text bg-white">
               <h1 class="section-title lh-base font-weight-600">
@@ -269,7 +284,7 @@ main {
     padding-top: 114px;
     z-index: 20;
     position: relative;
-  
+
     .card {
       padding: 3rem;
       border: none;
@@ -411,9 +426,38 @@ main {
       height: 730px;
       border-radius: 0 35px 35px 0;
       position: relative;
+      overflow: hidden;
+
+      .text-box {
+        position: absolute;
+        top: 210px;
+        left: 220px;
+
+        h1 {
+          font-size: 130px;
+          font-weight: 400;
+        }
+
+        h2 {
+          font-size: 22px;
+          font-weight: 600;
+          color: rgba(255, 255, 255, .81);
+        }
+
+        h5 {
+          font-size: 45px;
+          font-weight: 400;
+        }
+
+        h6 {
+          font-size: 22px;
+          font-weight: 600;
+          padding-top: 10px;
+        }
+      }
 
       img {
-        width: 100%;
+        height: 100%;
         border-radius: 35px 35px 35px 35px;
       }
 
@@ -436,17 +480,6 @@ main {
       box-shadow: 0 3px 35px 0 rgba(0, 0, 0, .14);
     }
   }
-
-
-
-
-
-
-
-
-
-
-
 
   /*altro css comune*/
   .first-section .img-man {

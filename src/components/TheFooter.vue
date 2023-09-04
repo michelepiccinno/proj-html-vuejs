@@ -23,7 +23,7 @@ export default {
           <h6 class="menu-title">QUICk LINKS</h6>
           <ul class="list-unstyled">
             <img class="img-hr" src="/src/assets/imgs/hr.jpg" alt="">
-            <li v-for="element in footerMenuElements" class="mb-1">{{ element }}</li>
+            <li v-for="element in footerMenuElements" class="menu-element mb-1">{{ element }}</li>
           </ul>
         </div>
         <div class="col">
@@ -61,7 +61,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 .img-hr {
   margin: 20px 0;
 }
@@ -70,6 +69,11 @@ export default {
   color: #444;
   font-size: 23px;
   font-weight: 700;
+}
+
+.menu-element:hover {
+  color: #00d9a6;
+  cursor: pointer;
 }
 
 .footer-bottom-container {
